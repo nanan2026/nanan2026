@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>図書館情報技術論 第1回</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fff6f8;
+    --card: #ffffff;
+    --text: #4a3f44;
+    --muted: #8b7a82;
+    --pink: #ec7a97;
+    --pink-soft: #ffe3ea;
+    --mint: #7cc5b0;
+    --mint-soft: #dff4ee;
+    --border: #f6cdd7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #2a2226;
+      --card: #362c31;
+      --text: #f1e6ea;
+      --muted: #b9a7af;
+      --pink: #f49ab3;
+      --pink-soft: #4a2e37;
+      --mint: #8fd6c1;
+      --mint-soft: #2c4640;
+      --border: #5a4149;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background-color: var(--bg);
+    background-image: radial-gradient(var(--border) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    color: var(--text);
+    font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+    font-size: 1rem;
+    line-height: 1.9;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  main {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 3.5rem 1.25rem 4.5rem;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.15rem 1.1rem;
+    border-radius: 999px;
+    background: var(--pink);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+  @media (prefers-color-scheme: dark) {
+    .badge { color: #2a2226; }
+  }
+
+  h1 {
+    margin: 0.6rem 0 0;
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+  }
+
+  .card {
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: 1.5rem;
+    padding: 1.75rem 1.5rem 1.9rem;
+  }
+  .card + .card { margin-top: 1.75rem; }
+
+  h2 {
+    display: inline-block;
+    margin: 0 0 1.25rem;
+    padding: 0.1rem 1rem;
+    border-radius: 999px;
+    background: var(--pink-soft);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.7;
+  }
+
+  .topic + .topic { margin-top: 1.5rem; }
+
+  h3 {
+    margin: 0 0 0.2rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+  h3::before {
+    content: "";
+    display: inline-block;
+    width: 0.65rem;
+    height: 0.65rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    background: var(--mint);
+  }
+
+  p { margin: 0; }
+
+  ul.books {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  ul.books li {
+    padding: 0.85rem 1rem;
+    border-radius: 1rem;
+    background: var(--mint-soft);
+  }
+  ul.books li + li { margin-top: 0.75rem; }
+  .author { font-weight: 700; }
+
+  @media (max-width: 480px) {
+    main { padding: 2.5rem 1rem 3.5rem; }
+    h1 { font-size: 1.6rem; }
+    .card { padding: 1.5rem 1.15rem 1.6rem; border-radius: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="badge">第1回</span>
+    <h1>図書館情報技術論</h1>
+  </header>
+
+  <section class="card">
+    <h2><span aria-hidden="true">🌻</span> 夏休みにしたこと</h2>
+
+    <div class="topic">
+      <h3>図書館ボランティア</h3>
+      <p>図書館のボランティアに参加し、除籍作業と書架整斉を行いました。書架整斉では普段見る機会があまりない棚の本を整理したり、図書館にこのような本があったことを知ることができたのでとても楽しかったです。また、だいぶ前に発行された本もあって興味深かったです。</p>
+    </div>
+
+    <div class="topic">
+      <h3>小樽観光</h3>
+      <p>久しぶりに小樽に行きました。前から気になっていた北一ヴェネツィア美術館に行きました。小樽にいながらヴェネツィアを感じることができるのでお勧めです。また、季節によってテーブルコーディネートも替わるそうなので何度いっても楽しめそうだなと思いました。</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><span aria-hidden="true">📖</span> 最近読んだ本</h2>
+    <ul class="books">
+      <li><span class="author">坂井栄八郎</span>『ドイツ史10講』岩波書店、2003年。</li>
+      <li><span class="author">柴田三千雄</span>『フランス史10講』岩波書店、2006年。</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
