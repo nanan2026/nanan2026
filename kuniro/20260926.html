@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Journal & Wishlist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            50: '#fcfcfb',
+                            100: '#f5f5f3',
+                            200: '#e8e8e3',
+                            300: '#d5d5cd',
+                            800: '#2d2d2a',
+                            900: '#1c1c1a',
+                        },
+                        terracotta: {
+                            DEFAULT: '#c86b51',
+                            dark: '#a8533b',
+                            light: '#f7ebe7',
+                        },
+                        sage: {
+                            DEFAULT: '#6e8574',
+                            light: '#edf1ee',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Shippori Mincho"', 'serif'],
+                        display: ['"Cinzel"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #faf9f6;
+            color: #2d2d2a;
+            word-break: break-word;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(220, 220, 215, 0.6);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-terracotta selection:text-white pb-24">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 glass-card transition-all duration-300">
+        <div class="max-w-4xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="w-2.5 h-2.5 rounded-full bg-terracotta"></span>
+                <span class="font-display font-medium text-lg tracking-widest text-stone-900">MEMOIR / TRAVEL</span>
+            </div>
+            <nav class="flex space-x-6 text-xs uppercase tracking-wider text-stone-800 font-medium">
+                <a href="#visited" class="hover:text-terracotta transition-colors duration-200">Visited</a>
+                <a href="#wishlist" class="hover:text-terracotta transition-colors duration-200">Wishlist</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-4xl mx-auto px-6 pt-16 pb-12 fade-in">
+        <div class="border-b border-stone-200 pb-12">
+            <p class="font-display text-xs tracking-[0.25em] text-terracotta uppercase mb-3 font-semibold">Vol. 02 — Personal Archive</p>
+            <h1 class="font-serif text-3xl sm:text-5xl font-normal leading-tight text-stone-900 tracking-normal mb-4">
+                記憶に残る場所と、<br class="hidden sm:inline" />いつか訪れたい景色の記録
+            </h1>
+            <p class="text-stone-800 font-light text-sm sm:text-base leading-relaxed max-w-2xl mt-4">
+                実際に歩いて体感した土地の空気感と、まだ見ぬ世界への期待をまとめたトラベルノート。
+            </p>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-6 space-y-20">
+
+        <!-- Section 1: Visited Places -->
+        <section id="visited" class="scroll-mt-28 fade-in">
+            <div class="flex items-center space-x-4 mb-8">
+                <h2 class="font-serif text-2xl text-stone-900 font-medium">01. 行ったことのある場所</h2>
+                <span class="h-px bg-stone-300 flex-grow"></span>
+                <span class="text-xs font-display tracking-widest text-stone-800">VISITED (2)</span>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card 1: 福岡 -->
+                <article class="bg-white rounded-2xl p-7 border border-stone-200 custom-shadow hover:border-terracotta/40 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-terracotta-light text-terracotta font-medium text-xs rounded-full tracking-wider">九州エリア</span>
+                            <span class="text-xs text-stone-800 font-display">FUKUOKA</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-semibold text-stone-900 mb-3 group-hover:text-terracotta transition-colors">
+                            福岡 <span class="text-sm font-normal text-stone-800 ml-1">/ 太宰府天満宮</span>
+                        </h3>
+                        <p class="text-stone-800 text-sm leading-relaxed mb-6 font-light">
+                            太宰府天満宮に参拝。東日本に比べて日没の時間が遅く、夕暮れ時になっても明るい空に少し不思議で新鮮な感覚を味わった旅。
+                        </p>
+                    </div>
+                    
+                    <div class="pt-4 border-t border-stone-100 flex items-start space-x-3 text-xs text-stone-800 bg-stone-50 p-3.5 rounded-xl">
+                        <i class="fa-solid fa-lightbulb text-terracotta mt-0.5"></i>
+                        <p class="leading-relaxed">
+                            <strong class="font-medium text-stone-800">Travel Note:</strong> 九州は東日本より日没が約30分以上遅いため、1日が長く感じられる独特の旅情があります。
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 2: 宮城 -->
+                <article class="bg-white rounded-2xl p-7 border border-stone-200 custom-shadow hover:border-terracotta/40 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-terracotta-light text-terracotta font-medium text-xs rounded-full tracking-wider">東北エリア</span>
+                            <span class="text-xs text-stone-800 font-display">MIYAGI</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-semibold text-stone-900 mb-3 group-hover:text-terracotta transition-colors">
+                            宮城 <span class="text-sm font-normal text-stone-800 ml-1">/ 仙台・歴史と聖地</span>
+                        </h3>
+                        <p class="text-stone-800 text-sm leading-relaxed mb-6 font-light">
+                            仙台を中心に、瑞鳳殿や大崎八幡宮、仙台城跡などの伊達家ゆかりの歴史名所を巡訪。『ハイキュー!!』の舞台でもあるため、観光と併せて聖地巡礼も満喫。
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-stone-100 flex items-start space-x-3 text-xs text-stone-800 bg-stone-50 p-3.5 rounded-xl">
+                        <i class="fa-solid fa-location-dot text-terracotta mt-0.5"></i>
+                        <p class="leading-relaxed">
+                            <strong class="font-medium text-stone-800">Spot Highlight:</strong> カメイアリーナ仙台など、作品の空気感をリアルに感じる街歩きが楽しめます。
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 2: Wishlist -->
+        <section id="wishlist" class="scroll-mt-28 fade-in">
+            <div class="flex items-center space-x-4 mb-8">
+                <h2 class="font-serif text-2xl text-stone-900 font-medium">02. 行きたい場所</h2>
+                <span class="h-px bg-stone-300 flex-grow"></span>
+                <span class="text-xs font-display tracking-widest text-stone-800">WISHLIST (3)</span>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Wish Item 1: ハウステンボス -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-stone-200 custom-shadow flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:border-sage transition-all duration-300 group">
+                    <div class="space-y-2 max-w-xl">
+                        <div class="flex items-center space-x-3">
+                            <span class="px-2.5 py-0.5 bg-sage-light text-sage text-xs rounded font-medium">国内旅行</span>
+                            <span class="text-xs font-display text-stone-800 tracking-wider">NAGASAKI, JAPAN</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-medium text-stone-900 group-hover:text-sage transition-colors">
+                            長崎県 / ハウステンボス
+                        </h3>
+                        <p class="text-stone-800 text-sm font-light leading-relaxed">
+                            日本にいながら本格的なヨーロッパの景色と風情を感じられる場所。季節の花々と壮大なイルミネーションを体感したい。
+                        </p>
+                    </div>
+                    <div class="w-full sm:w-auto flex sm:flex-col items-center sm:items-end justify-between sm:justify-center border-t sm:border-t-0 pt-4 sm:pt-0 border-stone-100">
+                        <span class="text-xs text-stone-800">Theme</span>
+                        <span class="text-xs font-medium text-stone-800 mt-1">花と光のヨーロッパ街並み</span>
+                    </div>
+                </div>
+
+                <!-- Wish Item 2: 東京都 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-stone-200 custom-shadow flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:border-sage transition-all duration-300 group">
+                    <div class="space-y-2 max-w-xl">
+                        <div class="flex items-center space-x-3">
+                            <span class="px-2.5 py-0.5 bg-sage-light text-sage text-xs rounded font-medium">国内旅行</span>
+                            <span class="text-xs font-display text-stone-800 tracking-wider">TOKYO, JAPAN</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-medium text-stone-900 group-hover:text-sage transition-colors">
+                            東京都 / 博物館・美術館巡り
+                        </h3>
+                        <p class="text-stone-800 text-sm font-light leading-relaxed">
+                            アートと歴史の世界的拠点が集まる東京。上野公園エリアを中心に、時間を気にせず様々なテーマの展示を心ゆくまで見て回りたい。
+                        </p>
+                    </div>
+                    <div class="w-full sm:w-auto flex sm:flex-col items-center sm:items-end justify-between sm:justify-center border-t sm:border-t-0 pt-4 sm:pt-0 border-stone-100">
+                        <span class="text-xs text-stone-800">Theme</span>
+                        <span class="text-xs font-medium text-stone-800 mt-1">アート＆カルチャー巡礼</span>
+                    </div>
+                </div>
+
+                <!-- Wish Item 3: イタリア -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-stone-200 custom-shadow flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:border-terracotta transition-all duration-300 group">
+                    <div class="space-y-2 max-w-xl">
+                        <div class="flex items-center space-x-3">
+                            <span class="px-2.5 py-0.5 bg-terracotta-light text-terracotta text-xs rounded font-medium">海外旅行</span>
+                            <span class="text-xs font-display text-stone-800 tracking-wider">ITALY, EUROPE</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-medium text-stone-900 group-hover:text-terracotta transition-colors">
+                            イタリア / 世界遺産とローマ帝国の遺構
+                        </h3>
+                        <p class="text-stone-800 text-sm font-light leading-relaxed">
+                            世界最多の世界遺産数を誇る国。コロッセオをはじめ、歴史の教科書で見た古代ローマ帝国の繁栄と栄華を現地で体感したい。
+                        </p>
+                    </div>
+                    <div class="w-full sm:w-auto flex sm:flex-col items-center sm:items-end justify-between sm:justify-center border-t sm:border-t-0 pt-4 sm:pt-0 border-stone-100">
+                        <span class="text-xs text-stone-800">Theme</span>
+                        <span class="text-xs font-medium text-stone-800 mt-1">世界遺産・歴史遺構</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-4xl mx-auto px-6 mt-24 pt-8 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-800 gap-4">
+        <p>© Travel Journal. All rights reserved.</p>
+        <p class="font-serif italic">“To travel is to live.”</p>
+    </footer>
+
+</body>
+</html>
