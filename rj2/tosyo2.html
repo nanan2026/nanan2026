@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>フランス近世の建築物</title>
+
+    <!-- Reveal.js コアCSS -->
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+
+    <!-- ベーステーマ：white.css（明解で上品な白背景） -->
+    <link rel="stylesheet" href="./dist/theme/white.css" />
+
+    <!-- コードハイライト用スタイル -->
+    <link rel="stylesheet" href="./dist/plugin/highlight/monokai.css" />
+
+    <!-- Google Fonts（明朝体・欧文フォント） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Markdown装飾用カスタムCSS -->
+    <style>
+        :root {
+            --r-main-font: 'Noto Serif JP', serif;
+            --r-heading-font: 'Noto Serif JP', serif;
+            --r-heading-color: #1a252c;
+            --r-main-color: #333333;
+            --accent-color: #8c6d3b;
+            /* 上品なゴールド系アクセント */
+        }
+
+        .reveal {
+            font-family: var(--r-main-font);
+        }
+
+        /* 大見出し (H1) */
+        .reveal h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: var(--r-heading-color);
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        /* 中見出し (H2) */
+        .reveal h2 {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: var(--r-heading-color);
+            margin-bottom: 35px;
+            position: relative;
+        }
+
+        .reveal h2::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 15px auto 0;
+        }
+
+        /* 小見出し (H3) - サブアイテム用 */
+        .reveal h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-top: 25px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        /* パラグラフ・サブタイトル */
+        .reveal p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .reveal p.subtitle {
+            font-size: 1.1em;
+            color: #666;
+            letter-spacing: 0.08em;
+        }
+
+        /* リスト整列・カード風ブロック */
+        .reveal ul {
+            background: rgba(0, 0, 0, 0.02);
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px 40px 30px 60px;
+            margin: 20px auto;
+            max-width: 80%;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .reveal ul li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            font-size: 0.9em;
+        }
+
+        .reveal ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        .reveal strong {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Markdownエリア -->
+            <section data-markdown data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n--\r?\n$">
+                <textarea data-template>
+
+# フランス近世の建築物
+<!-- .element: class="title-slide" -->
+17世紀〜ルネサンスの優美なる遺産
+<!-- .element: class="subtitle" -->
+
+---
+
+## ヴェルサイユ宮殿
+
+- **建築時期・様式**：17世紀（バロック建築・ロココ建築）
+- **特徴**：ルイ14世が建築したフランス近世（絶対王政期）を象徴する宮殿
+
+---
+
+## ロワール渓谷の城群
+
+- **シャンボール城**  
+  フランス・ルネサンス建築の最高峰
+- **シュノンソー城**  
+  優美な城で「婦人たちの城」とも呼ばれるルネサンス様式
+
+---
+
+# Fin
+
+                </textarea>
+            </section>
+        </div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+    <script src="./dist/plugin/notes.js"></script>
+    <script src="./dist/plugin/markdown.js"></script>
+    <script src="./dist/plugin/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide', // スライドのアニメーション切替 ('slide', 'fade', 'convex' など)
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        });
+    </script>
+</body>
+
+</html>
